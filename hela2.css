@@ -1,0 +1,542 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+/* the important bits */
+li {
+  perspective: 400px;
+  
+}
+.body {
+	background: #8b52cc9d;
+}
+.info {
+  transform: rotate3d(1, 0, 0, 90deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  pointer-events: none;
+  background-color: rgba(161, 26, 188, 0.9);
+}
+
+.in-top .info {
+  transform-origin: 50% 0%;
+  -webkit-animation: in-top 300ms ease 0ms 1 forwards;
+          animation: in-top 300ms ease 0ms 1 forwards;
+}
+
+.in-right .info {
+  transform-origin: 100% 0%;
+  -webkit-animation: in-right 300ms ease 0ms 1 forwards;
+          animation: in-right 300ms ease 0ms 1 forwards;
+}
+
+.in-bottom .info {
+  transform-origin: 50% 100%;
+  -webkit-animation: in-bottom 300ms ease 0ms 1 forwards;
+          animation: in-bottom 300ms ease 0ms 1 forwards;
+}
+
+.in-left .info {
+  transform-origin: 0% 0%;
+  -webkit-animation: in-left 300ms ease 0ms 1 forwards;
+          animation: in-left 300ms ease 0ms 1 forwards;
+}
+
+.out-top .info {
+  transform-origin: 50% 0%;
+  -webkit-animation: out-top 300ms ease 0ms 1 forwards;
+          animation: out-top 300ms ease 0ms 1 forwards;
+}
+
+.out-right .info {
+  transform-origin: 100% 50%;
+  -webkit-animation: out-right 300ms ease 0ms 1 forwards;
+          animation: out-right 300ms ease 0ms 1 forwards;
+}
+
+.out-bottom .info {
+  transform-origin: 50% 100%;
+  -webkit-animation: out-bottom 300ms ease 0ms 1 forwards;
+          animation: out-bottom 300ms ease 0ms 1 forwards;
+}
+
+.out-left .info {
+  transform-origin: 0% 0%;
+  -webkit-animation: out-left 300ms ease 0ms 1 forwards;
+          animation: out-left 300ms ease 0ms 1 forwards;
+}
+
+@-webkit-keyframes in-top {
+  from {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+
+@keyframes in-top {
+  from {
+    transform: rotate3d(-1, 0, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-right {
+  from {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-right {
+  from {
+    transform: rotate3d(0, -1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-bottom {
+  from {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-bottom {
+  from {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes in-left {
+  from {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes in-left {
+  from {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes out-top {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(-1, 0, 0, 104deg);
+  }
+}
+@keyframes out-top {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(-1, 0, 0, 104deg);
+  }
+}
+@-webkit-keyframes out-right {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, -1, 0, 104deg);
+  }
+}
+@keyframes out-right {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, -1, 0, 104deg);
+  }
+}
+@-webkit-keyframes out-bottom {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 0, 0, 104deg);
+  }
+}
+@keyframes out-bottom {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 0, 0, 104deg);
+  }
+}
+@-webkit-keyframes out-left {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 104deg);
+  }
+}
+@keyframes out-left {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 104deg);
+  }
+}
+/* you can ignore this ones */
+ul {
+  padding: 0;
+  margin: 0 0 50px;
+  
+}
+ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+li {
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  padding: 0;
+  list-style: none;
+}
+li a {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  border-radius: 4px;
+}
+li h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+li p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+}
+li img{
+  align-items: center;
+  background-position: center;
+}
+li {
+  background-position: center;
+}
+
+li .normal {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: rgba(52, 73, 94, 0.6);
+  box-shadow: inset 0 2px 20px #e6ebedc9;
+  text-align: center;
+  font-size: 50px;
+  line-height: 200px;
+  background-image: 
+          url(images/kl/giphy.webp);
+  background-size: cover;background-position: center;
+}
+li .normal2 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/cine.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal3 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/museoss.webp);
+          background-size: cover;background-position: center;
+  }
+  li .normal4 {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/helado.png
+          );
+          background-size: cover;background-position: center;
+  }
+  li .normal5 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal6 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal7 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal8 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal9 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal10 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal11 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+  li .normal12 {
+    width: 100%;
+    height: 100%;
+    background-color: #ECF0F1;
+    color: rgba(52, 73, 94, 0.6);
+    box-shadow: inset 0 2px 20px #e6ebed;
+    text-align: center;
+    font-size: 50px;
+    line-height: 200px;
+    background-image: 
+          url(images/kl/ramo.jpg);
+          background-size: cover;background-position: center;
+  }
+
+li .normal svg, .normal2 svg, .normal3 svg, .normal4 svg, .normal5 svg, .normal6 svg, .normal7 svg, .normal8 svg, .normal9 svg, .normal10 svg, .normal11 svg, .normal12 svg {
+  pointer-events: none;
+  width: 50px;
+}
+li .normal svg path, .normal2 svg path, .normal3 svg path, .normal4 svg path, .normal5 svg path, .normal6 svg path, .normal7 svg path, .normal8 svg path, .normal9 svg path, .normal10 svg path, .normal11 svg path, .normal12 svg path {
+  fill: rgba(52, 73, 94, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+}
+
+h1 {
+  margin: 0 auto 5px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Bree Serif", serif;
+}
+
+.container {
+  width: 840px;
+  margin: 0 auto;
+}
+
+header {
+  font-family: "Bree Serif", serif;
+  text-align: center;
+  margin: 50px 0 25px;
+  color: #34495E;
+}
+header p {
+  margin: 0;
+  color: rgba(69, 117, 165, 0.849);
+}
+
+
+.boton {
+    width: auto;
+    margin: auto;
+  }
+  
+  @-webkit-keyframes topAnimation {
+    from {
+      transform: translate(0rem, 0);
+    }
+    to {
+      transform: translate(0rem, 3.5rem);
+    }
+  }
+  
+  @keyframes topAnimation {
+    from {
+      transform: translate(0rem, 0);
+    }
+    to {
+      transform: translate(0rem, 3.5rem);
+    }
+  }
+  @-webkit-keyframes bottomAnimation {
+    from {
+      transform: translate(-11.5rem, 0);
+    }
+    to {
+      transform: translate(0rem, 0);
+    }
+  }
+  @keyframes bottomAnimation {
+    from {
+      transform: translate(-11.5rem, 0);
+    }
+    to {
+      transform: translate(0rem, 0);
+    }
+  }
+  button.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+    position: relative;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: #111111;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+  }
+  button.btn::after, button.btn::before {
+    border: 0;
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 10%;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: -2;
+    border-radius: 50%;
+  }
+  button.btn::before {
+    border: 0;
+    background-color: #7318c9;
+    top: -0.75rem;
+    left: 0.5rem;
+    -webkit-animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+            animation: topAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.25s infinite alternate;
+  }
+  button.btn::after {
+    background-color: #7318c9;
+    top: 3rem;
+    left: 13rem;
+    -webkit-animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+            animation: bottomAnimation 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s infinite alternate;
+  }
+  button.btn:hover {
+    color: white;
+  }
+  button.btn:hover::before, button.btn:hover::after {
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    -webkit-animation: none;
+            animation: none;
+  }
+  button.btn:hover::after {
+    left: 0rem;
+  }
+  button.btn:hover::before {
+    top: 0.5rem;
+    left: 0.35rem;
+  }

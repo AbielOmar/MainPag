@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otro Mess!</title>
+    <link rel="shorcut icon" href="images/kl/cora.png">
+    <link rel="stylesheet" href="inicio.css">
+    </head>
+<body >
+    <header class="header">
+        <video id="vid" class="video">
+            <source src="images/kl/tinovid.mp4">
+        </video>
+        <script>
+            window.addEventListener('click',()=>{
+                document.getElementById("vid").play();
+            });
+        </script>
+        
+        <audio id="song">
+            <source src="images/kl/tinocan.mp3">
+        </audio>
+        <script>
+            window.addEventListener('click',()=>{
+                document.getElementById("song").play();
+            });
+        </script>
+        
+        <div class="header-content container">
+            <h2 class="glow-on-hover"><a href="https://open.spotify.com/intl-es/track/2OF2V1JvNjOCOjhnIdfh3L?si=9746c16e815644e5" target="_blank">Te Amo :)</a></h2>
+            <p>
+                <br>DALE CLICK EN ALGUN ESPACIO EN BLANCO!<br>
+                Por fin ya puedes ver este intento de "pagina" jajajas<br>
+                Checa todos los detalles, hay pistas regadass😘<br>
+            </p>
+            
+            <a href="paleta.html" class="btn-1">Dale aqui</a>
+        </div>
+    </header>
+    </body>
+    </html>
+    <script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(event) {
+            var audio = document.getElementById("song");
+            //audio.muted = false;
+            audio.play();
+             
+        });
+	</script>
+    <script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(event) {
+            var video= document.getElementById("vid");
+            //audio.muted = false;
+            video.play();
+             
+        });
+	</script>

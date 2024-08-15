@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400,500,600,700,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    transition: .3s ease;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.89),
+        rgba(0, 0, 0, 0.856)),
+        url(images/eladiovideo.mp4);
+        background-position: unset;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+}
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+        z-index: 0;
+
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #414247;
+    opacity: 0.7;
+}
+   
+.logo{
+    color: #FFFDFC;
+    font-size: 25px;
+    font-weight: 800;
+    animation: 5s girar infinite  ;
+}
+@keyframes girar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.header-content{
+    text-align: center;
+    z-index: 1;
+}
+.header-content h2{
+    color: #420730;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: auto;
+    font-size: 55px;
+    line-height: 70px;
+}
+.header-content p{
+    font-size: 18px;
+    color: #d16bd4;
+    padding: 0 250px;
+    margin: 25px 25px 45px 25px;
+}
+.btn-1 {
+    padding: 0.8em 1.8em;
+    border: 2px solid #d67ee7;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #df89e2;
+   }
+   
+   .btn-1::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(1deg);
+    background: #a5199e;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .btn-1:hover::before {
+    width: 105%;
+   }
+   
+   .btn-1:hover {
+    color: #111;
+   }
+.btn-1{
+    display: inline-block;
+    padding: 11px 35px;
+    background-color: #352a2a9a;
+    color: #F9FAFC;
+    text-transform: uppercase;
+}
+.btn-1:hover{
+    background-color:#85217dc2     ;
+    color: white;
+    box-shadow: 0 0 15px #85217dc2,
+                0 0 45px #85217dc2,
+                0 0 75px #85217dc2,
+                0 0 115px #85217dc2;
+}
+.musica{
+    
+    color: #000000;
+    margin: 25px 25px 45px 25px;
+}
+.glow-on-hover {
+    display: inline-block;
+    width:auto;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    padding: 11px 35px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #cc00ff, #ff0095, #c63de9, #ff0000, #8400ff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
